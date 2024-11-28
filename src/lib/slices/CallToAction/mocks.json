@@ -29,8 +29,8 @@
 			},
 			"section_id": {
 				"__TYPE__": "FieldContent",
-				"value": "handle",
-				"type": "Text"
+				"type": "Text",
+				"value": "cta"
 			}
 		},
 		"items": []

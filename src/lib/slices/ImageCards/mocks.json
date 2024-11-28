@@ -92,72 +92,6 @@
 	},
 	{
 		"__TYPE__": "SharedSliceContent",
-		"variation": "cardNoImageOrButton",
-		"primary": {
-			"heading": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "heading1",
-						"content": {
-							"text": "Given"
-						}
-					}
-				]
-			},
-			"cards": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"text",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Sint nostrud ullamco exercitation."
-											}
-										}
-									]
-								}
-							],
-							[
-								"card_content",
-								{
-									"__TYPE__": "StructuredTextContent",
-									"value": [
-										{
-											"type": "paragraph",
-											"content": {
-												"text": "Minim quis eu cillum duis occaecat nostrud ipsum sint incididunt eu velit deserunt irure ea. Culpa magna pariatur irure aute est sit aliqua nostrud labore esse culpa cupidatat Lorem commodo. Excepteur cillum duis sunt et."
-											}
-										}
-									]
-								}
-							]
-						]
-					}
-				]
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "jack",
-				"type": "Text"
-			}
-		},
-		"items": [
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": []
-			}
-		]
-	},
-	{
-		"__TYPE__": "SharedSliceContent",
 		"variation": "cardFullImage",
 		"primary": {
 			"heading": {
@@ -248,8 +182,8 @@
 			},
 			"section_id": {
 				"__TYPE__": "FieldContent",
-				"value": "fix",
-				"type": "Text"
+				"type": "Text",
+				"value": "services"
 			}
 		},
 		"items": [
@@ -358,8 +292,74 @@
 			},
 			"section_id": {
 				"__TYPE__": "FieldContent",
-				"value": "difficulty",
-				"type": "Text"
+				"type": "Text",
+				"value": "expertise"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "cardNoImageOrButton",
+		"primary": {
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading1",
+						"content": {
+							"text": "Given"
+						}
+					}
+				]
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Sint nostrud ullamco exercitation."
+											}
+										}
+									]
+								}
+							],
+							[
+								"card_content",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Minim quis eu cillum duis occaecat nostrud ipsum sint incididunt eu velit deserunt irure ea. Culpa magna pariatur irure aute est sit aliqua nostrud labore esse culpa cupidatat Lorem commodo. Excepteur cillum duis sunt et."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "benefits"
 			}
 		},
 		"items": [

@@ -18,7 +18,7 @@
 		<nav class="flex flex-wrap gap-4 items-center">
 			<ul class="flex flex-wrap gap-1 md:gap-3">
 				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
-					<a href="#benifits">Benifits</a>
+					<a href="#benefits">benefits</a>
 				</li>
 				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
 					<a href="#services">Services</a>
