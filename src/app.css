@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	font-family: 'Montserrat Variable', sans-serif;
+	background-image: url('/assets/noise-texture.svg');
+	@apply grid bg-white bg-repeat text-gray-950;
+}
+[data-collapsible].bg-white + [data-collapsible].bg-white,
+[data-collapsible].bg-slate-100 + [data-collapsible].bg-slate-100 {
+	@apply pt-0 md:pt-0;
+}

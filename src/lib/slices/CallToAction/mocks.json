@@ -1,0 +1,38 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"call": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading3",
+						"content": {
+							"text": "Giant"
+						}
+					}
+				]
+			},
+			"action": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://prismic.io",
+					"text": "hidden"
+				}
+			},
+			"buttontext": {
+				"__TYPE__": "FieldContent",
+				"value": "same",
+				"type": "Text"
+			},
+			"section_id": {
+				"__TYPE__": "FieldContent",
+				"value": "handle",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
