@@ -1,13 +1,4 @@
-# Prismic + SvelteKit Multi-Page Starter
-
-Want to see an example of a multi-page website using [Prismic][prismic] and [SvelteKit][sveltekit]? Look no further! This project provides all the code you need for a personal website with a homepage, information pages, and navigation.
-
-- **Demo**: [Open live demo][live-demo]
-- **Learn more about Prismic and SvelteKit**: [Prismic SvelteKit Documentation][prismic-docs]
-
-&nbsp;
-
-<img src="https://user-images.githubusercontent.com/8601064/166617932-eaaa1643-f086-4909-9868-56234f8da98d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+# Prismic + SvelteKit
 
 &nbsp;
 
