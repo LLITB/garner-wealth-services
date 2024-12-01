@@ -10,7 +10,7 @@
 	class="bg-cyan-700 py-4 md:py-6"
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	id={slice.primary.section_id ? slice.primary.section_id : 'none'}
+	id={slice.primary.section_id ? `${slice.primary.section_id}` : 'none'}
 >
 	<!-- {slice} -->
 	<div
