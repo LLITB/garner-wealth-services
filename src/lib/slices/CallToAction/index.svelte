@@ -3,7 +3,7 @@
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
 	import { PrismicLink } from '@prismicio/svelte';
 	export let slice: Content.CallToActionSlice;
-	console.log('cta:', slice);
+	// console.log('cta:', slice);
 </script>
 
 <section

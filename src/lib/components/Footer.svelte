@@ -34,11 +34,13 @@
 				<Logo />
 				<span class="sr-only">{settings.data.siteTitle}</span>
 			</a>
-			<ul class="flex flex-wrap gap-6 md:gap-10">
+			<ul class="flex flex-wrap items-center gap-1 md:gap-3">
 				{#each navigation.data?.links as item}
 					<li
 						class={clsx(
-							'relative inline-flex h-fit w-fit rounded-full border border-cyan-900/20 bg-cyan-200/10 px-4 py-2 text-cyan-700 outline-none ring-orange-700 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-orange-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-orange-400/40 hover:text-orange-400 after:hover:bg-opacity-15 focus:ring-2'
+							item.external === true
+								? 'relative inline-flex h-fit w-fit rounded-full border border-cyan-900/20 bg-cyan-200/10 px-4 py-2 text-cyan-700 outline-none ring-orange-700 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-orange-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-orange-400/40 hover:text-orange-400 after:hover:bg-opacity-15 focus:ring-2'
+								: 'py-4 px-2 hover:text-cyan-900 text-cyan-800'
 						)}
 					>
 						<PrismicLink field={item.link}>

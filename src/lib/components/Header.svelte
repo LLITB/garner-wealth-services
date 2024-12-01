@@ -2,45 +2,81 @@
 	import clsx from 'clsx';
 	import type { Content } from '@prismicio/client';
 	import { PrismicLink, PrismicText } from '@prismicio/svelte';
-
+	import IconClose from './IconClose.svelte';
+	import IconMenu from './IconMenu.svelte';
 	import Bounded from './Bounded.svelte';
 	import Logo from './Logo.svelte';
 	export let settings: Content.SettingsDocument;
 	export let navigation: Content.NavigationDocument;
+	let isOpen = false;
+	const toggleOpen = () => (isOpen = !isOpen);
+	const close = () => (isOpen = false);
 </script>
 
 <Bounded tag="header" yPadding="xs" class=" border-b-2 border-cyan-700">
-	<div class="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
-		<a href="/">
-			<Logo />
-			<span class="sr-only">{settings.data.siteTitle}</span>
-		</a>
-		<nav class="flex flex-wrap gap-4 items-center">
-			<ul class="flex flex-wrap gap-1 md:gap-3">
-				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
-					<a href="#benefits">benefits</a>
-				</li>
-				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
-					<a href="#services">Services</a>
-				</li>
-				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
-					<a href="#expertise">Areas of Expertise</a>
-				</li>
-				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800"><a href="#contact">Contact</a></li>
-			</ul>
-			<ul class="flex flex-wrap gap-1 md:gap-3">
+	<nav
+		class="mx-auto flex max-w-6xl flex-col justify-between py-2 font-medium md:flex-row md:items-center"
+	>
+		<div class="flex items-center justify-between">
+			<a href="/" on:click={close} class="z-50">
+				<Logo />
+				<span class="sr-only">{settings.data.siteTitle}</span>
+			</a>
+			<button
+				type="button"
+				class="block p-2 text-3xl text-black md:hidden"
+				aria-expanded={isOpen}
+				on:click={toggleOpen}
+			>
+				<IconMenu /></button
+			>
+		</div>
+		<!-- Mobile Menu -->
+		<div
+			class={clsx(
+				'fixed inset-0 z-40 flex flex-col items-end bg-slate-50 pr-4 pt-6 transition-transform duration-300 ease-in-out md:hidden',
+				isOpen ? 'translate-x-0' : 'translate-x-[100%]'
+			)}
+		>
+			<button
+				aria-expanded={isOpen}
+				type="button"
+				class="block p-2 text-3xl text-black md:hidden"
+				on:click={toggleOpen}
+			>
+				<IconClose />
+			</button>
+			<ul class="grid justify-items-end gap-4">
 				{#each navigation.data?.links as item}
 					<li
 						class={clsx(
-							'relative inline-flex h-fit w-fit rounded-full border border-cyan-900/20 bg-cyan-200/10 px-4 py-2 text-cyan-700 outline-none ring-orange-700 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-orange-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-orange-400/40 hover:text-orange-400 after:hover:bg-opacity-15 focus:ring-2'
+							item.external === true
+								? 'relative inline-flex h-fit w-fit rounded-full border border-cyan-900/20 bg-cyan-200/10 px-4 py-2 text-cyan-700 outline-none ring-orange-700 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-orange-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-orange-400/40 hover:text-orange-400 after:hover:bg-opacity-15 focus:ring-2 text-2xl'
+								: 'py-4 px-2 hover:text-cyan-900 text-cyan-800 font-medium text-2xl'
 						)}
 					>
-						<PrismicLink field={item.link}>
+						<PrismicLink field={item.link} on:click={close}>
 							<PrismicText field={item.label} />
 						</PrismicLink>
 					</li>
 				{/each}
 			</ul>
-		</nav>
-	</div>
+		</div>
+		<!-- Desktop Menu -->
+		<ul class="hidden md:flex flex-wrap items-center gap-1 md:gap-3">
+			{#each navigation.data?.links as item}
+				<li
+					class={clsx(
+						item.external === true
+							? 'relative inline-flex h-fit w-fit rounded-full border border-cyan-900/20 bg-cyan-200/10 px-4 py-2 text-cyan-700 outline-none ring-orange-700 transition-colors after:absolute after:inset-0 after:-z-10 after:animate-pulse after:rounded-full after:bg-orange-100 after:bg-opacity-0 after:blur-md after:transition-all after:duration-500 hover:border-orange-400/40 hover:text-orange-400 after:hover:bg-opacity-15 focus:ring-2'
+							: 'py-4 px-2 hover:text-cyan-900 text-cyan-800'
+					)}
+				>
+					<PrismicLink field={item.link}>
+						<PrismicText field={item.label} />
+					</PrismicLink>
+				</li>
+			{/each}
+		</ul>
+	</nav>
 </Bounded>

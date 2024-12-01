@@ -27,6 +27,17 @@ export interface NavigationDocumentDataLinksItem {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	link: prismic.LinkField;
+
+	/**
+	 * external field in *Navigation → Links*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: navigation.links[].external
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	external: prismic.BooleanField;
 }
 
 /**

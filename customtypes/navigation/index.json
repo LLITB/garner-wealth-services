@@ -27,6 +27,15 @@
 								"placeholder": "Link for navigation item",
 								"select": null
 							}
+						},
+						"external": {
+							"type": "Boolean",
+							"config": {
+								"label": "external",
+								"placeholder_false": "false",
+								"placeholder_true": "true",
+								"default_value": false
+							}
 						}
 					}
 				}
