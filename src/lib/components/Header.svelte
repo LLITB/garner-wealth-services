@@ -11,6 +11,16 @@
 	let isOpen = false;
 	const toggleOpen = () => (isOpen = !isOpen);
 	const close = () => (isOpen = false);
+	function handleAnchorClick(event: { preventDefault: () => void; currentTarget: any }) {
+		event.preventDefault();
+		const link = event.currentTarget;
+		const anchorId = new URL(link.href).hash.replace('#', '');
+		const anchor = document.getElementById(anchorId);
+		window.scrollTo({
+			top: anchor!.offsetTop,
+			behavior: 'smooth'
+		});
+	}
 </script>
 
 <Bounded tag="header" yPadding="xs" class=" border-b-2 border-cyan-700">
@@ -72,9 +82,15 @@
 							: 'py-4 px-2 hover:text-cyan-900 text-cyan-800'
 					)}
 				>
-					<PrismicLink field={item.link}>
-						<PrismicText field={item.label} />
-					</PrismicLink>
+					{#if item.external === true}
+						<PrismicLink field={item.link}>
+							<PrismicText field={item.label} />
+						</PrismicLink>
+					{:else}
+						<PrismicLink field={item.link} on:click={handleAnchorClick}>
+							<PrismicText field={item.label} />
+						</PrismicLink>
+					{/if}
 				</li>
 			{/each}
 		</ul>
