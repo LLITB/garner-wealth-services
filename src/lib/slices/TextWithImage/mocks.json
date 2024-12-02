@@ -46,11 +46,6 @@
 			"direction_right": {
 				"__TYPE__": "BooleanContent",
 				"value": false
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "handle",
-				"type": "Text"
 			}
 		},
 		"items": [
@@ -113,11 +108,6 @@
 			"direction_right": {
 				"__TYPE__": "BooleanContent",
 				"value": false
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "development",
-				"type": "Text"
 			}
 		},
 		"items": [

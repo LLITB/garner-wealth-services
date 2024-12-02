@@ -63,13 +63,6 @@
               }
             }
           }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
-          }
         }
       },
       "items": {},
@@ -116,13 +109,6 @@
                 }
               }
             }
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },
@@ -187,13 +173,6 @@
                 }
               }
             }
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },
@@ -267,13 +246,6 @@
                 }
               }
             }
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },

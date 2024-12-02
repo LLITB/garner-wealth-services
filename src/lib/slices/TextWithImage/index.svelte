@@ -14,7 +14,6 @@
 	class="grid grid-cols-1 md:flex max-w-7xl gap-4 justify-items-center md:justify-around mx-auto my-5 lg:my-10 py-4 md:py-5 w-full max-md:max-w-full"
 	data-slice-type={slice.slice_type}
 	data-slice-variation={slice.variation}
-	id={slice.primary.section_id ? `${slice.primary.section_id}` : 'none'}
 >
 	<div
 		class="text-2xl text-center md:text-left max-w-3xl px-4 prose prose-a:py-2 prose-a:px-4 prose-a:border-2 prose-a:border-cyan-700 prose-a:rounded-md prose-a:text-base prose-a:no-underline"

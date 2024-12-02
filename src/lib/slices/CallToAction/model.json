@@ -37,13 +37,6 @@
             "select": null,
             "allowText": true
           }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
-          }
         }
       },
       "items": {}

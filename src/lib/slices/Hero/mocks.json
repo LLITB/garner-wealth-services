@@ -54,11 +54,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "aware",
-				"type": "Text"
 			}
 		},
 		"items": [
@@ -126,11 +121,6 @@
 			"direction_right": {
 				"__TYPE__": "BooleanContent",
 				"value": true
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "similar",
-				"type": "Text"
 			}
 		},
 		"items": [

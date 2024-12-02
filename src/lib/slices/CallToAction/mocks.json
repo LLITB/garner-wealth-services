@@ -26,11 +26,6 @@
 				"__TYPE__": "FieldContent",
 				"value": "same",
 				"type": "Text"
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"type": "Text",
-				"value": "cta"
 			}
 		},
 		"items": []

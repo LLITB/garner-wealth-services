@@ -17,7 +17,6 @@
 		class="bg-white"
 		data-slice-type={slice.slice_type}
 		data-slice-variation={slice.variation}
-		id={slice.primary.section_id ? `${slice.primary.section_id}` : 'none'}
 	>
 		<div class="grid gap-12">
 			{#if isFilled.richText(slice.primary.heading)}

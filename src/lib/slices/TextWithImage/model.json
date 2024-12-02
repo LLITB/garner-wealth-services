@@ -39,13 +39,6 @@
             "placeholder_true": "true",
             "default_value": true
           }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
-          }
         }
       },
       "items": {},
@@ -97,13 +90,6 @@
             "placeholder_false": "false",
             "placeholder_true": "true",
             "default_value": true
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },

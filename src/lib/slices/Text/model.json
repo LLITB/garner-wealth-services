@@ -19,13 +19,6 @@
             "allowTargetBlank": true,
             "multi": "paragraph,heading1,heading2,heading3,strong,em,hyperlink,list-item,o-list-item"
           }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
-          }
         }
       },
       "items": {},
@@ -45,13 +38,6 @@
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "heading1,heading2,heading3,paragraph,em,strong,hyperlink,list-item,o-list-item"
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },

@@ -25,11 +25,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "newspaper",
-				"type": "Text"
 			}
 		},
 		"items": [
@@ -65,11 +60,6 @@
 				"alt": null,
 				"__TYPE__": "ImageContent",
 				"thumbnails": {}
-			},
-			"section_id": {
-				"__TYPE__": "FieldContent",
-				"value": "whose",
-				"type": "Text"
 			}
 		},
 		"items": [

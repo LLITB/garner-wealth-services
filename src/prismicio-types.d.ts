@@ -230,16 +230,6 @@ export interface CallToActionSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
 	 */
 	action: prismic.LinkField;
-
-	/**
-	 * Section Id field in *CallToAction → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -312,16 +302,6 @@ export interface HeroSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	backgroundImage: prismic.ImageField<never>;
-
-	/**
-	 * Section Id field in *Hero → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -401,16 +381,6 @@ export interface HeroSliceHeroTextLeftImageRightPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	direction_right: prismic.BooleanField;
-
-	/**
-	 * Section Id field in *Hero → Hero text left image right → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero.heroTextLeftImageRight.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -453,16 +423,6 @@ export interface ImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
-
-	/**
-	 * Section Id field in *Image → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -491,16 +451,6 @@ export interface ImageSliceBannerPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#image
 	 */
 	image: prismic.ImageField<never>;
-
-	/**
-	 * Section Id field in *Image → Banner → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image.banner.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -713,16 +663,6 @@ export interface ImageCardsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	cards: prismic.GroupField<Simplify<ImageCardsSliceDefaultPrimaryCardsItem>>;
-
-	/**
-	 * Section Id field in *ImageCards → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_cards.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -761,16 +701,6 @@ export interface ImageCardsSliceCardNoImageOrButtonPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	cards: prismic.GroupField<Simplify<ImageCardsSliceCardNoImageOrButtonPrimaryCardsItem>>;
-
-	/**
-	 * Section Id field in *ImageCards → Card no image or button → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_cards.cardNoImageOrButton.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -819,16 +749,6 @@ export interface ImageCardsSliceCardFullImagePrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	cards: prismic.GroupField<Simplify<ImageCardsSliceCardFullImagePrimaryCardsItem>>;
-
-	/**
-	 * Section Id field in *ImageCards → card full image → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_cards.cardFullImage.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -867,16 +787,6 @@ export interface ImageCardsSliceCardWithIconPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#group
 	 */
 	cards: prismic.GroupField<Simplify<ImageCardsSliceCardWithIconPrimaryCardsItem>>;
-
-	/**
-	 * Section Id field in *ImageCards → CardWithIcon → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image_cards.cardWithIcon.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -975,16 +885,6 @@ export interface TextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	text: prismic.RichTextField;
-
-	/**
-	 * Section Id field in *Text → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1013,16 +913,6 @@ export interface TextSliceTwoColumnsPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	text: prismic.RichTextField;
-
-	/**
-	 * Section Id field in *Text → Two Columns → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.twoColumns.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1086,16 +976,6 @@ export interface TextWithImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	direction_right: prismic.BooleanField;
-
-	/**
-	 * Section Id field in *TextWithImage → Default → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text_with_image.default.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**
@@ -1165,16 +1045,6 @@ export interface TextWithImageSliceWithButtonPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
 	direction_right: prismic.BooleanField;
-
-	/**
-	 * Section Id field in *TextWithImage → With Button → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text_with_image.withButton.primary.section_id
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	section_id: prismic.KeyTextField;
 }
 
 /**

@@ -18,13 +18,6 @@
             "constraint": {},
             "thumbnails": []
           }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
-          }
         }
       },
       "items": {},
@@ -46,13 +39,6 @@
               "height": 1000
             },
             "thumbnails": []
-          }
-        },
-        "section_id": {
-          "type": "Text",
-          "config": {
-            "label": "Section Id",
-            "placeholder": ""
           }
         }
       },
