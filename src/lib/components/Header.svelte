@@ -82,15 +82,12 @@
 							: 'py-4 px-2 hover:text-cyan-900 text-cyan-800'
 					)}
 				>
-					{#if item.external === true}
-						<PrismicLink field={item.link}>
-							<PrismicText field={item.label} />
-						</PrismicLink>
-					{:else}
-						<PrismicLink field={item.link} on:click={handleAnchorClick}>
-							<PrismicText field={item.label} />
-						</PrismicLink>
-					{/if}
+					<PrismicLink field={item.link}>
+						<PrismicText field={item.label} />
+					</PrismicLink>
+				</li>
+				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+					<a href="#benefits" on:click={handleAnchorClick}>test</a>
 				</li>
 			{/each}
 		</ul>
