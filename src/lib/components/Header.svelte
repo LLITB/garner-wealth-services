@@ -86,10 +86,10 @@
 						<PrismicText field={item.label} />
 					</PrismicLink>
 				</li>
-				<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
-					<a href="#benefits" on:click={handleAnchorClick}>test</a>
-				</li>
 			{/each}
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="#benefits" on:click={handleAnchorClick}>test</a>
+			</li>
 		</ul>
 	</nav>
 </Bounded>
