@@ -87,6 +87,9 @@
 					</PrismicLink>
 				</li>
 			{/each}
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="#key-benefits-of-working-with-us">Benefits</a>
+			</li>
 		</ul>
 	</nav>
 </Bounded>
