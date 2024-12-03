@@ -23,6 +23,7 @@
 		<div>
 			<PrismicLink
 				field={slice.primary.action}
+				target="_blank"
 				class="self-stretch px-6 py-4 my-auto text-lg leading-none bg-cyan-700 text-white border border-white border-solid max-md:px-5 rounded-lg"
 			>
 				{slice.primary.action.text || 'Learn More'}

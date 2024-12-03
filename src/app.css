@@ -7,6 +7,14 @@ body {
 	background-image: url('/assets/noise-texture.svg');
 	@apply grid bg-white bg-repeat text-gray-950;
 }
+.glass-container {
+	position: relative;
+}
+
+.glass-container::before {
+	@apply absolute -inset-[10px] -z-10 rounded-3xl border border-gray-100/50 bg-gray-200/40 backdrop-blur-md;
+	content: '';
+}
 /* [data-collapsible].bg-white + [data-collapsible].bg-white,
 [data-collapsible].bg-slate-100 + [data-collapsible].bg-slate-100 {
 	@apply pt-0 md:pt-0;

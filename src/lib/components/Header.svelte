@@ -12,18 +12,24 @@
 	const toggleOpen = () => (isOpen = !isOpen);
 	const close = () => (isOpen = false);
 	function handleAnchorClick(event: { preventDefault: () => void; currentTarget: any }) {
+		const offset = 100;
 		event.preventDefault();
 		const link = event.currentTarget;
 		const anchorId = new URL(link.href).hash.replace('#', '');
 		const anchor = document.getElementById(anchorId);
 		window.scrollTo({
-			top: anchor!.offsetTop,
+			top: anchor!.offsetTop - offset,
 			behavior: 'smooth'
 		});
+		close();
 	}
 </script>
 
-<Bounded tag="header" yPadding="xs" class=" border-b-2 border-cyan-700">
+<Bounded
+	tag="header"
+	yPadding="none"
+	class=" border-b-2 border-cyan-700 bg-slate-50 sticky top-0 z-50"
+>
 	<nav
 		class="mx-auto flex max-w-6xl flex-col justify-between py-2 font-medium md:flex-row md:items-center"
 	>
@@ -57,6 +63,21 @@
 				<IconClose />
 			</button>
 			<ul class="grid justify-items-end gap-4">
+				<li class="py-2 px-2 hover:text-cyan-900 text-cyan-800 text-2xl">
+					<a href="/#key-benefits-of-working-with-us" on:click={handleAnchorClick}>Benefits</a>
+				</li>
+				<li class="py-2 px-2 hover:text-cyan-900 text-cyan-800 text-2xl">
+					<a href="/#services-we-provide" on:click={handleAnchorClick}>Services</a>
+				</li>
+				<li class="py-2 px-2 hover:text-cyan-900 text-cyan-800 text-2xl">
+					<a href="/#areas-of-expertise" on:click={handleAnchorClick}>Areas of Expertise</a>
+				</li>
+				<li class="py-2 px-2 hover:text-cyan-900 text-cyan-800 text-2xl">
+					<a href="/#contact-us" on:click={handleAnchorClick}>Contact</a>
+				</li>
+				<li class="py-2 px-2 hover:text-cyan-900 text-cyan-800 text-2xl">
+					<a href="/#about-us" on:click={handleAnchorClick}>About</a>
+				</li>
 				{#each navigation.data?.links as item}
 					<li
 						class={clsx(
@@ -74,20 +95,20 @@
 		</div>
 		<!-- Desktop Menu -->
 		<ul class="hidden md:flex flex-wrap items-center gap-1 md:gap-3">
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#key-benefits-of-working-with-us">Benefits</a>
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="/#key-benefits-of-working-with-us" on:click={handleAnchorClick}>Benefits</a>
 			</li>
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#services-we-provide">Services</a>
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="/#services-we-provide" on:click={handleAnchorClick}>Services</a>
 			</li>
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#areas-of-expertise">Areas of Expertise</a>
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="/#areas-of-expertise" on:click={handleAnchorClick}>Areas of Expertise</a>
 			</li>
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#contact-us">Contact</a>
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="/#contact-us" on:click={handleAnchorClick}>Contact</a>
 			</li>
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#about-us">About</a>
+			<li class="py-4 px-2 hover:text-cyan-900 text-cyan-800">
+				<a href="/#about-us" on:click={handleAnchorClick}>About</a>
 			</li>
 			{#each navigation.data?.links as item}
 				<li

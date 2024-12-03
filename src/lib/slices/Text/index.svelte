@@ -12,7 +12,7 @@
 
 {#if slice.variation !== 'headerOnly'}
 	<section
-		class="grid grid-cols-1 gap-4 items-center md:flex max-w-7xl mx-auto h-full max-h-[1200px] w-full max-md:max-w-full py-6 md:py-10 lg:py-14"
+		class="grid grid-cols-1 gap-4 items-center md:flex max-w-7xl mx-auto h-full max-h-[1200px] w-full max-md:max-w-full px-4 py-6 md:py-10 lg:py-14 prose-p:text-xl"
 		data-slice-type={slice.slice_type}
 		data-slice-variation={slice.variation}
 	>
