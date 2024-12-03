@@ -74,6 +74,21 @@
 		</div>
 		<!-- Desktop Menu -->
 		<ul class="hidden md:flex flex-wrap items-center gap-1 md:gap-3">
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="/#key-benefits-of-working-with-us">Benefits</a>
+			</li>
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="/#services-we-provide">Services</a>
+			</li>
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="/#areas-of-expertise">Areas of Expertise</a>
+			</li>
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="/#contact-us">Contact</a>
+			</li>
+			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
+				<a href="/#about-us">About</a>
+			</li>
 			{#each navigation.data?.links as item}
 				<li
 					class={clsx(
@@ -87,9 +102,6 @@
 					</PrismicLink>
 				</li>
 			{/each}
-			<li class="'py-4 px-2 hover:text-cyan-900 text-cyan-800'">
-				<a href="/#key-benefits-of-working-with-us">Benefits</a>
-			</li>
 		</ul>
 	</nav>
 </Bounded>

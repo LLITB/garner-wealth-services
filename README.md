@@ -52,3 +52,7 @@ limitations under the License.
 [sveltekit]: https://kit.svelte.dev/
 [starter-docs]: ./docs/README.md
 [live-demo]: https://sveltekit-starter-prismic-multi-page.vercel.app/
+
+if you need the slicesimulator config add back:
+,
+"localSliceSimulatorURL": "http://localhost:5173/slice-simulator"
