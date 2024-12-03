@@ -10,6 +10,17 @@
 	<div class="leading-relaxed border border-gray-900 rounded-lg p-6 bg-white">
 		<div class="text-2xl font-semibold mb-5 text-center">
 			<PrismicRichText field={card.text} />
+			<!-- <Heading
+				as="h2"
+				size="3xl"
+				id={card.text
+					.toLowerCase()
+					.replace(/[^\w\s-]/g, '')
+					.replace(/[\s_-]+/g, '-')
+					.replace(/(^-|-$)/g, '')}
+			>
+				{card.text}
+			</Heading> -->
 		</div>
 		<div>
 			<PrismicRichText field={card.card_content} />

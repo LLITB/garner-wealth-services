@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import * as prismicR from '@prismicio/richtext';
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicText } from '@prismicio/svelte';
 
@@ -10,6 +12,7 @@
 	import ImageCardIcon from './ImageCardIcon.svelte';
 
 	export let slice: Content.ImageCardsSlice;
+	// onMount(()=>getFieldData(data))
 </script>
 
 {#if slice.variation === 'default'}
@@ -20,8 +23,17 @@
 	>
 		<div class="grid gap-12">
 			{#if isFilled.richText(slice.primary.heading)}
-				<Heading class="text-center">
-					<PrismicText field={slice.primary.heading} />
+				<Heading
+					as="h2"
+					size="3xl"
+					id={prismicR
+						.asText(slice.primary.heading)
+						.toLowerCase()
+						.replace(/[^\w\s-]/g, '')
+						.replace(/[\s_-]+/g, '-')
+						.replace(/(^-|-$)/g, '')}
+				>
+					<PrismicText field={slice.primary.heading} getFieldData(slice.primary.heading) />
 				</Heading>
 			{/if}
 
@@ -41,7 +53,17 @@
 	>
 		<div class="grid gap-6 md:gap-12 py-5 md:py-10 max-w-7xl mx-auto">
 			{#if isFilled.richText(slice.primary.heading)}
-				<Heading class="text-center">
+				<Heading
+					as="h2"
+					size="3xl"
+					className="text-center"
+					id={prismicR
+						.asText(slice.primary.heading)
+						.toLowerCase()
+						.replace(/[^\w\s-]/g, '')
+						.replace(/[\s_-]+/g, '-')
+						.replace(/(^-|-$)/g, '')}
+				>
 					<PrismicText field={slice.primary.heading} />
 				</Heading>
 			{/if}
@@ -64,7 +86,17 @@
 	>
 		<div class="grid gap-12">
 			{#if isFilled.richText(slice.primary.heading)}
-				<Heading class="text-center">
+				<Heading
+					as="h2"
+					size="3xl"
+					className="text-center"
+					id={prismicR
+						.asText(slice.primary.heading)
+						.toLowerCase()
+						.replace(/[^\w\s-]/g, '')
+						.replace(/[\s_-]+/g, '-')
+						.replace(/(^-|-$)/g, '')}
+				>
 					<PrismicText field={slice.primary.heading} />
 				</Heading>
 			{/if}
@@ -85,7 +117,23 @@
 	>
 		<div class="grid gap-12 mx-auto max-w-7xl bg-[#156F89]">
 			{#if isFilled.richText(slice.primary.heading)}
-				<Heading class="text-center text-white">
+				<!-- <Heading className="text-white leading-relaxed" as="h3" size="3xl"
+				
+				>
+					<PrismicText field={slice.primary.heading} />
+				</Heading> -->
+				<!-- {slice.primary.heading[0].text} -->
+				<Heading
+					as="h2"
+					size="3xl"
+					id={prismicR
+						.asText(slice.primary.heading)
+						.toLowerCase()
+						.replace(/[^\w\s-]/g, '')
+						.replace(/[\s_-]+/g, '-')
+						.replace(/(^-|-$)/g, '')}
+					className="text-white text-center"
+				>
 					<PrismicText field={slice.primary.heading} />
 				</Heading>
 			{/if}

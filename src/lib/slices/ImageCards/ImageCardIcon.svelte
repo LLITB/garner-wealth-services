@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { isFilled, type Content } from '@prismicio/client';
 	import { PrismicImage, PrismicLink } from '@prismicio/svelte';
-
+	import * as prismicR from '@prismicio/richtext';
 	import PrismicRichText from '$lib/components/PrismicRichText.svelte';
-	import Heading3 from '$lib/components/PrismicRichText/Heading3.svelte';
+	import { PrismicText } from '@prismicio/svelte';
+	import Heading from '$lib/components/Heading.svelte';
 
 	export let card: Content.ImageCardsSliceCardWithIconPrimaryCardsItem;
 </script>
@@ -22,7 +23,9 @@
 	<div
 		class="mt-5 w-full tracking-wider leading-none text-center prose prose-h3:text-sky-900 prose-h3:text-lg"
 	>
-		<PrismicRichText field={card.text} />
+		<Heading as="h5" size="xl">
+			<PrismicText field={card.text} />
+		</Heading>
 	</div>
 	{#if isFilled.richText(card.body)}
 		<PrismicRichText field={card.body} />

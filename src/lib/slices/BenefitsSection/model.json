@@ -1,0 +1,26 @@
+{
+  "id": "benefits_section",
+  "type": "SharedSlice",
+  "name": "BenefitsSection",
+  "description": "BenefitsSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "benefit_cards": {
+          "type": "Link",
+          "config": {
+            "label": "benefit cards",
+            "select": "document"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

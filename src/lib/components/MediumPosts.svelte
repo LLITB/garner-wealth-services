@@ -3,7 +3,9 @@
 	/**
 	 * @type {any[]}
 	 */
+
 	let posts = [];
+	// let {user: string} = $props();
 	onMount(async () => {
 		fetch('https://mediumpostsapi.vercel.app/api/lgarner_26737')
 			.then((response) => response.json())

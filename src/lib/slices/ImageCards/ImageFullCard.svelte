@@ -19,7 +19,7 @@
 	/>
 
 	<div
-		class="leading-relaxed text-2xl text-white absolute w-full bottom-0 text-center px-6 py-4 bg-gradient-to-b from-white/30 to-gray-800 drop-shadow-[2px_2px_var(--tw-shadow-color)] shadow-gray-800"
+		class="leading-relaxed text-xl text-white absolute w-full bottom-0 text-center px-6 py-4 bg-gradient-to-b from-white/30 to-gray-800 drop-shadow-[2px_2px_var(--tw-shadow-color)] shadow-gray-800"
 	>
 		<PrismicRichText field={card.text} />
 	</div>

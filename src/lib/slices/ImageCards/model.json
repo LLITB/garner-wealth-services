@@ -17,7 +17,7 @@
             "label": "Heading",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "heading1"
+            "multi": "heading1,heading2"
           }
         },
         "cards": {

@@ -198,6 +198,51 @@ export type SettingsDocument<Lang extends string = string> = prismic.PrismicDocu
 export type AllDocumentTypes = NavigationDocument | PageDocument | SettingsDocument;
 
 /**
+ * Primary content in *BenefitsSection → Default → Primary*
+ */
+export interface BenefitsSectionSliceDefaultPrimary {
+	/**
+	 * benefit cards field in *BenefitsSection → Default → Primary*
+	 *
+	 * - **Field Type**: Content Relationship
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: benefits_section.default.primary.benefit_cards
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	benefit_cards: prismic.ContentRelationshipField;
+}
+
+/**
+ * Default variation for BenefitsSection Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BenefitsSectionSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<BenefitsSectionSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *BenefitsSection*
+ */
+type BenefitsSectionSliceVariation = BenefitsSectionSliceDefault;
+
+/**
+ * BenefitsSection Shared Slice
+ *
+ * - **API ID**: `benefits_section`
+ * - **Description**: BenefitsSection
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BenefitsSectionSlice = prismic.SharedSlice<
+	'benefits_section',
+	BenefitsSectionSliceVariation
+>;
+
+/**
  * Primary content in *CallToAction → Default → Primary*
  */
 export interface CallToActionSliceDefaultPrimary {
@@ -929,9 +974,37 @@ export type TextSliceTwoColumns = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Text → HeaderOnly → Primary*
+ */
+export interface TextSliceHeaderOnlyPrimary {
+	/**
+	 * Text field in *Text → HeaderOnly → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text.headerOnly.primary.text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	text: prismic.RichTextField;
+}
+
+/**
+ * HeaderOnly variation for Text Slice
+ *
+ * - **API ID**: `headerOnly`
+ * - **Description**: Text
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextSliceHeaderOnly = prismic.SharedSliceVariation<
+	'headerOnly',
+	Simplify<TextSliceHeaderOnlyPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Text*
  */
-type TextSliceVariation = TextSliceDefault | TextSliceTwoColumns;
+type TextSliceVariation = TextSliceDefault | TextSliceTwoColumns | TextSliceHeaderOnly;
 
 /**
  * Text Shared Slice
@@ -1107,6 +1180,10 @@ declare module '@prismicio/client' {
 			SettingsDocument,
 			SettingsDocumentData,
 			AllDocumentTypes,
+			BenefitsSectionSlice,
+			BenefitsSectionSliceDefaultPrimary,
+			BenefitsSectionSliceVariation,
+			BenefitsSectionSliceDefault,
 			CallToActionSlice,
 			CallToActionSliceDefaultPrimary,
 			CallToActionSliceVariation,
@@ -1144,9 +1221,11 @@ declare module '@prismicio/client' {
 			TextSlice,
 			TextSliceDefaultPrimary,
 			TextSliceTwoColumnsPrimary,
+			TextSliceHeaderOnlyPrimary,
 			TextSliceVariation,
 			TextSliceDefault,
 			TextSliceTwoColumns,
+			TextSliceHeaderOnly,
 			TextWithImageSlice,
 			TextWithImageSliceDefaultPrimary,
 			TextWithImageSliceWithButtonPrimary,
