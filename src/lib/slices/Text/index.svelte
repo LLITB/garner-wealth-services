@@ -12,7 +12,7 @@
 
 {#if slice.variation !== 'headerOnly'}
 	<section
-		class="grid grid-cols-1 gap-4 items-center md:flex max-w-7xl mx-auto h-full max-h-[1200px] w-full max-md:max-w-full px-4 py-6 md:py-10 lg:py-14 prose-p:text-xl"
+		class="grid grid-cols-1 gap-4 items-center md:flex max-w-7xl mx-auto h-full max-h-[1200px] w-full max-md:max-w-full px-4 py-6 md:py-10 lg:py-14 prose-p:text-base prose-h2:text-3xl prose-h3:text-2xl prose-h3:font-semibold prose-h4:text-xl"
 		data-slice-type={slice.slice_type}
 		data-slice-variation={slice.variation}
 	>
@@ -29,7 +29,7 @@
 	>
 		<Heading
 			as="h2"
-			size="3xl"
+			size="4xl"
 			id={prismicR
 				.asText(slice.primary.text)
 				.toLowerCase()
