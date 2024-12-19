@@ -19,7 +19,7 @@
 			<blockquote>
 				<p
 					class={clsx(
-						'text-4xl font-medium leading-tight md:text-5xl md:leading-tight',
+						'text-3xl font-medium leading-tight md:leading-tight',
 						!isFilled.keyText(slice.primary.source) && 'text-center'
 					)}
 				>
